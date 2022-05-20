@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'tour/css/style.css' %}">
+    <title></title>
+</head>
+<body>
+<header class="header">
+    <div class="icon"></div>
+</header>
+<!-- Видео сверху -->
+<div class="intro">
+    <div class="video">
+        <video class="video__media" src="{% static 'tour/media/video.mp4' %}" autoplay muted loop></video>
+    </div>
+    <div class="intro__title title"></div>
+    <div class="intro__subtitle"></div>
+</div>
+<!-- Animated tours -->
+<div class="animated-tour">
+    <div class="animated-tour__item">
+        <div class="animated-tour__tilte"></div>
+        <div class="animated-tour__description"></div> 
+    </div>
+</div>
+<div class="tour">
+    <div class="tour__block">
+        <div class="tour__title"></div>
+        <div class="tour__description"></div>
+    </div>
+    <div class="tour__item">
+        <div class="tour__title"></div>
+        <div class="tour__description"></div> 
+    </div>
+</div>
+<footer>
+    <div class="footer__description"></div>
+    <div class="footer__copyright"></div>
+</footer>
+</body>
+</html>
