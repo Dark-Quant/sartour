@@ -3,6 +3,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +16,7 @@
 </head>
 <body>
 <header class="header">
-    <div class="icon"></div>
+    <div class="icon">Что-то</div>
 </header>
 <!-- Видео сверху -->
 <div class="intro">
@@ -24,8 +29,33 @@
 <!-- Animated tours -->
 <div class="animated-tour">
     <div class="animated-tour__item">
-        <div class="animated-tour__tilte"></div>
-        <div class="animated-tour__description"></div> 
+        <img class="animated-tour__photo" src="{% static 'tour/media/background.jpg' %}" alt="">
+        <div class="animated-tour__content">
+            <div class="animated-tour__tilte">Собор</div>
+            <div class="animated-tour__description">Какой-то собор</div> 
+            <div class="animated-tour__btn btn">Виртуальный тур</div>
+        </div>
+    </div>
+    <div class="animated-tour__item">
+        <img class="animated-tour__photo" src="{% static 'tour/media/background.jpg' %}" alt="">
+        <div class="animated-tour__content">
+            <div class="animated-tour__tilte">Собор</div>
+            <div class="animated-tour__description">Какой-то собор</div> 
+        </div>
+    </div>
+    <div class="animated-tour__item">
+        <img class="animated-tour__photo" src="{% static 'tour/media/background.jpg' %}" alt="">
+        <div class="animated-tour__content">
+            <div class="animated-tour__tilte">Собор</div>
+            <div class="animated-tour__description">Какой-то собор</div> 
+        </div>
+    </div>
+    <div class="animated-tour__item">
+        <img class="animated-tour__photo" src="{% static 'tour/media/background.jpg' %}" alt="">
+        <div class="animated-tour__content">
+            <div class="animated-tour__tilte">Собор</div>
+            <div class="animated-tour__description">Какой-то собор</div> 
+        </div>
     </div>
 </div>
 <div class="tour">
