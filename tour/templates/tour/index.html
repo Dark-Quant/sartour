@@ -4,7 +4,7 @@
 <html lang="ru">
 <head>
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.google apis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
@@ -23,12 +23,14 @@
     <div class="video">
         <video class="video__media" src="{% static 'tour/media/video.mp4' %}" autoplay muted loop></video>
     </div>
-    <div class="intro__title title"></div>
-    <div class="intro__subtitle"></div>
+	<div class="container">
+		<div class="intro__title title"></div>
+		<div class="intro__subtitle"></div>
+	</div>
 </div>
 <!-- Animated tours -->
 <div class="animated-tour">
-    <div class="animated-tour__item">
+	<div class="animated-tour__item">
         <img class="animated-tour__photo" src="{% static 'tour/media/background.jpg' %}" alt="">
         <div class="animated-tour__content">
             <div class="animated-tour__tilte">Собор</div>
@@ -60,13 +62,85 @@
 </div>
 <div class="tour">
     <div class="tour__block">
-        <div class="tour__title"></div>
-        <div class="tour__description"></div>
+        <div class="container">
+			<div class="tour__title">Что-то</div>
+			<div class="tour__subtitle">Описание чего-то</div>
+        </div>
     </div>
-    <div class="tour__item">
-        <div class="tour__title"></div>
-        <div class="tour__description"></div> 
-    </div>
+    <div class="tour__list container">
+    	<div class="tour__item">
+			<img src="{% static 'tour/media/background.jpg' %}" alt="" class="tour__photo">
+			<div class="tour__name">Какой-то собор</div>
+			<div class="tour__btn-wrapper">
+				<div class="tour__btn btn btn--gray">Виртуальный тур</div>
+				<div class="tour__btn btn btn--aqua">О соборе</div>
+			</div>
+		</div>
+		<div class="tour__item">
+			<img src="{% static 'tour/media/background.jpg' %}" alt="" class="tour__photo">
+			<div class="tour__name">Какой-то собор</div>
+			<div class="tour__btn-wrapper">
+				<div class="tour__btn btn btn--gray">Виртуальный тур</div>
+				<div class="tour__btn btn btn--aqua">О соборе</div>
+			</div>
+		</div>
+		<div class="tour__item">
+			<img src="{% static 'tour/media/background.jpg' %}" alt="" class="tour__photo">
+			<div class="tour__name">Какой-то собор</div>
+			<div class="tour__btn-wrapper">
+				<div class="tour__btn btn btn--gray">Виртуальный тур</div>
+				<div class="tour__btn btn btn--aqua">О соборе</div>
+			</div>
+		</div>
+		<div class="tour__item">
+			<img src="{% static 'tour/media/background.jpg' %}" alt="" class="tour__photo">
+			<div class="tour__name">Какой-то собор</div>
+			<div class="tour__btn-wrapper">
+				<div class="tour__btn btn btn--gray">Виртуальный тур</div>
+				<div class="tour__btn btn btn--aqua">О соборе</div>
+			</div>
+		</div>
+		<div class="tour__item">
+			<img src="{% static 'tour/media/background.jpg' %}" alt="" class="tour__photo">
+			<div class="tour__name">Какой-то собор</div>
+			<div class="tour__btn-wrapper">
+				<div class="tour__btn btn btn--gray">Виртуальный тур</div>
+				<div class="tour__btn btn btn--aqua">О соборе</div>
+			</div>
+		</div>
+		<div class="tour__item">
+			<img src="{% static 'tour/media/background.jpg' %}" alt="" class="tour__photo">
+			<div class="tour__name">Какой-то собор</div>
+			<div class="tour__btn-wrapper">
+				<div class="tour__btn btn btn--gray">Виртуальный тур</div>
+				<div class="tour__btn btn btn--aqua">О соборе</div>
+			</div>
+		</div>
+		<div class="tour__item">
+			<img src="{% static 'tour/media/background.jpg' %}" alt="" class="tour__photo">
+			<div class="tour__name">Какой-то собор</div>
+			<div class="tour__btn-wrapper">
+				<div class="tour__btn btn btn--gray">Виртуальный тур</div>
+				<div class="tour__btn btn btn--aqua">О соборе</div>
+			</div>
+		</div>
+		<div class="tour__item">
+			<img src="{% static 'tour/media/background.jpg' %}" alt="" class="tour__photo">
+			<div class="tour__name">Какой-то собор</div>
+			<div class="tour__btn-wrapper">
+				<div class="tour__btn btn btn--gray">Виртуальный тур</div>
+				<div class="tour__btn btn btn--aqua">О соборе</div>
+			</div>
+		</div>
+		<div class="tour__item">
+			<img src="{% static 'tour/media/background.jpg' %}" alt="" class="tour__photo">
+			<div class="tour__name">Какой-то собор</div>
+			<div class="tour__btn-wrapper">
+				<div class="tour__btn btn btn--gray">Виртуальный тур</div>
+				<div class="tour__btn btn btn--aqua">О соборе</div>
+			</div>
+		</div>
+	</div>
 </div>
 <footer>
     <div class="footer__description"></div>

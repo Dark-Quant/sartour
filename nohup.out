@@ -1,0 +1,6 @@
+[0530/114745:ERROR:browser_main_loop.cc(261)] Gtk: Locale not supported by C library.
+	Using the fallback 'C' locale.
+Gtk-Message: 11:47:46.667: Failed to load module "canberra-gtk-module"
+Buffer for node stdout exceeded max size (4GB), clearing buffer.[0603/214118:ERROR:browser_main_loop.cc(261)] Gtk: Locale not supported by C library.
+	Using the fallback 'C' locale.
+Gtk-Message: 21:41:18.931: Failed to load module "canberra-gtk-module"
