@@ -244,3 +244,22 @@ body {
 .tour__btn:first-child {
 	margin-right: 10px;
 }
+
+/* Footer 
+================= */
+.footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #424242;
+    min-height: 100px;
+}
+
+.footer__description {
+    width: 75%;
+
+}
+
+.footer__feedback {
+
+}
