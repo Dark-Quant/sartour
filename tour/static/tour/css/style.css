@@ -255,11 +255,58 @@ body {
     min-height: 100px;
 }
 
+.footer__inner {
+    display: flex;
+    flex-direction: row;
+}
+
 .footer__description {
     width: 75%;
-
+    height: 100%;
 }
 
 .footer__feedback {
 
+}
+
+.footer__title {
+    font-size: 12px;
+    color: #e2e2e2;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.footer__link {
+    margin-bottom: 4px;
+}
+
+.social__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 4px;
+
+    background-color: #000;
+    border-radius: 10px;
+
+    transition: background-color .1s linear;
+}
+
+.social__item:hover {
+    background-color: #e8ecee;
+}
+
+.social__item:hover .social__icon {
+    fill: #000000;
+}
+
+.social__icon {
+    fill: #c6accc;
+    height: 35px;
+
+    transition: fill .1s linear;
 }
