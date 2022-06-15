@@ -16,7 +16,7 @@ body {
 }
 
 .title {
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
@@ -24,8 +24,6 @@ body {
 .video {
     position: relative;
     z-index: 1;
-    padding-bottom: 56.25%;
-
 }
 
 .video__media {
@@ -46,7 +44,7 @@ body {
     border: 0;
 
     font-size: 13px;
-    font-weight: 800;
+    font-weight: 600;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
@@ -320,6 +318,7 @@ body {
 }
 
 .footer__link {
+    font-size: 16px;
     margin-bottom: 4px;
 }
 
@@ -352,6 +351,13 @@ body {
     transition: fill .1s linear;
 }
 
+@media (hover: none) {
+    .animated-tour__btn {
+        margin-top: 40px;
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width: 1199px) {
     .container {
         max-width: 1000px;
@@ -359,6 +365,15 @@ body {
 
     .intro__title {
         font-size: 76px;
+    }
+
+    .footer {
+        padding: 15px 10px;
+    }
+
+    .footer__inner:first-child {
+        margin-bottom: 15px;
+        flex-direction: column;
     }
 }
 
@@ -382,6 +397,81 @@ body {
 
 @media screen and (max-width: 767px) {
     .container{
-        max
+        max-width: 767px;
+        padding: 0 15px;
+    }
+    .intro {
+        width: auto;
+        height: 100vh;
+    }
+    .video {
+        height: 100%;
+    }
+    .video__media {
+        width: auto;
+        height: 100%;
+    }
+    .intro__title {
+        font-size: 46px;
+    }
+    .animated-tour__tilte {
+        font-size: 32px;
+    }
+    .animated-tour__content {
+        font-size: 12px;
+    }
+    .animated-tour__btn {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 623px) {
+    .container {
+        max-width: 480px
+    }
+    .intro__title {
+        font-size: 48px;
+    }
+    .animated-tour__item {
+        width: 100%;
+    }
+    .tour__item {
+        width: 100%;
+    }
+    .tour__title {
+        font-size: 40px;
+    }
+    .tour__subtitle {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .container {
+        max-width: 320px;
+    }
+    .intro__title {
+        font-size: 36px;
+    }
+    .animated-tour__tilte {
+        font-size: 30px;
+    }
+    .animated-tour__description {
+        font-size: 14px;
+    }
+    .animated-tour__btn {
+        font-size: 12px;
+    }
+    .tour__title {
+        font-size: 36px;
+    }
+    .tour__subtitle {
+        font-size: 20px;
+    }
+    .tour__btn {
+        font-size: 12px;
+    }
+    .footer__link {
+        font-size: 14px;
     }
 }
