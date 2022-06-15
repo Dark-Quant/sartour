@@ -162,7 +162,7 @@ body {
 	border-radius: 45px;
 	opacity: 0;
 	transition-property: margin-top, opacity;
-	transition-duration: .2s;9
+	transition-duration: .2s;
 }
 
 .animated-tour__btn:hover {
@@ -293,6 +293,7 @@ body {
     width: 100%;
     background-color: #424242;
     min-height: 100px;
+    padding: 15px 0;
 }
 
 .footer__inner {
@@ -349,4 +350,38 @@ body {
     height: 35px;
 
     transition: fill .1s linear;
+}
+
+@media screen and (max-width: 1199px) {
+    .container {
+        max-width: 1000px;
+    }
+
+    .intro__title {
+        font-size: 76px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .container {
+        max-width: 750px;
+    }
+
+    .intro__title {
+        font-size: 56px;
+    }
+
+    .animated-tour__item {
+        height: 400px;
+    }
+
+    .tour__item {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container{
+        max
+    }
 }
