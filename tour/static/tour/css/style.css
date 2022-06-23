@@ -150,6 +150,10 @@ body {
     opacity: .5;
 }
 
+.animated-tour__item:last-child:nth-child(2n+1) {
+    width: 100%;
+}
+
 .animated-tour__btn {
     display: inline-block;
     font-size: 14px; 
@@ -242,6 +246,8 @@ body {
 	display: -o-flex;
 	display: flex;
 	flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .tour__item {
@@ -254,7 +260,8 @@ body {
 
 .tour__photo {
 	width: 100%;
-    height: auto;
+    height: 350px;
+    object-fit: cover;
 }
 
 .tour__name {

@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1uw=fr9#t#g$x4ws#fgkf_gg3g978ez7b2u4*q0caes5t-_9d_
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'ngrok.io',
+    'e9f6-78-85-246-124.eu.ngrok.io',
     '127.0.0.1'
         ]
 
@@ -126,3 +126,6 @@ STATIC_ROOT = BASE_DIR / 'static'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'

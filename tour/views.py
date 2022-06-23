@@ -1,8 +1,9 @@
 from http.client import HTTPResponse
 from django.shortcuts import render
 
-def home(request):
-    return render(request, 'tour/index.html')
+from .models import *
 
-def virtual_tour(request):
-    return render(request, 'tour/tour.html')
+def home(request):
+    tours_is_restored = Tour.objects.filter(is_restored=True)
+    tours = Tour.objects.filter(is_restored=False)[:4]
+    return render(request, 'tour/index.html', context={'title': 'Главная страница', 'tours_is_restored': tours_is_restored, 'tours': tours})

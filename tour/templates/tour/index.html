@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'tour/css/style.css' %}">
-    <title></title>
+    <title>{{ title }}</title>
 </head>
 <body>
 
@@ -42,38 +42,15 @@
 </div>
 <!-- Animated tours -->
 <div class="animated-tour">
+	{% for t in tours_is_restored %}
 	<div class="animated-tour__item">
-        <img class="animated-tour__photo" src="{% static 'tour/media/background.jpg' %}" alt="">
+        <img class="animated-tour__photo" src="{{ t.photo.url }}" alt="">
         <div class="animated-tour__content">
-            <div class="animated-tour__tilte">Собор</div>
-            <div class="animated-tour__description">Какой-то собор</div> 
-            <div class="animated-tour__btn btn">Виртуальный тур</div>
+            <div class="animated-tour__tilte">{{ t.title }}</div>
+            <a href="{{ t.virtual_tour }}" class="animated-tour__btn btn">Виртуальный тур</a>
         </div>
     </div>
-    <div class="animated-tour__item">
-        <img class="animated-tour__photo" src="{% static 'tour/media/background.jpg' %}" alt="">
-        <div class="animated-tour__content">
-            <div class="animated-tour__tilte">Собор</div>
-            <div class="animated-tour__description">Какой-то собор</div> 
-            <div class="animated-tour__btn btn">Виртуальный тур</div>
-        </div>
-    </div>
-	<div class="animated-tour__item">
-        <img class="animated-tour__photo" src="{% static 'tour/media/background.jpg' %}" alt="">
-        <div class="animated-tour__content">
-            <div class="animated-tour__tilte">Собор</div>
-            <div class="animated-tour__description">Какой-то собор</div> 
-            <div class="animated-tour__btn btn">Виртуальный тур</div>
-        </div>
-    </div>
-	<div class="animated-tour__item">
-        <img class="animated-tour__photo" src="{% static 'tour/media/background.jpg' %}" alt="">
-        <div class="animated-tour__content">
-            <div class="animated-tour__tilte">Собор</div>
-            <div class="animated-tour__description">Какой-то собор</div> 
-            <div class="animated-tour__btn btn">Виртуальный тур</div>
-        </div>
-    </div>
+	{% endfor %}
 </div>
 <div class="tour">
     <div class="tour__block">
@@ -83,78 +60,16 @@
         </div>
     </div>
     <div class="tour__list container">
+		{% for t in tours %}
     	<div class="tour__item">
-			<img src="{% static 'tour/media/background.jpg' %}" alt="" class="tour__photo">
-			<div class="tour__name">Какой-то собор</div>
+			<img src="{{ t.photo.url }}" alt="" class="tour__photo">
+			<div class="tour__name">{{ t.title }}</div>
 			<div class="tour__btn-wrapper">
-				<div class="tour__btn btn btn--gray">Виртуальный тур</div>
+				<a href="{{ t.virtual_tour }}" class="tour__btn btn btn--gray">Виртуальный тур</a>
 				<div class="tour__btn btn btn--aqua">О соборе</div>
 			</div>
 		</div>
-		<div class="tour__item">
-			<img src="{% static 'tour/media/background.jpg' %}" alt="" class="tour__photo">
-			<div class="tour__name">Какой-то собор</div>
-			<div class="tour__btn-wrapper">
-				<div class="tour__btn btn btn--gray">Виртуальный тур</div>
-				<div class="tour__btn btn btn--aqua">О соборе</div>
-			</div>
-		</div>
-		<div class="tour__item">
-			<img src="{% static 'tour/media/background.jpg' %}" alt="" class="tour__photo">
-			<div class="tour__name">Какой-то собор</div>
-			<div class="tour__btn-wrapper">
-				<div class="tour__btn btn btn--gray">Виртуальный тур</div>
-				<div class="tour__btn btn btn--aqua">О соборе</div>
-			</div>
-		</div>
-		<div class="tour__item">
-			<img src="{% static 'tour/media/background.jpg' %}" alt="" class="tour__photo">
-			<div class="tour__name">Какой-то собор</div>
-			<div class="tour__btn-wrapper">
-				<div class="tour__btn btn btn--gray">Виртуальный тур</div>
-				<div class="tour__btn btn btn--aqua">О соборе</div>
-			</div>
-		</div>
-		<div class="tour__item">
-			<img src="{% static 'tour/media/background.jpg' %}" alt="" class="tour__photo">
-			<div class="tour__name">Какой-то собор</div>
-			<div class="tour__btn-wrapper">
-				<div class="tour__btn btn btn--gray">Виртуальный тур</div>
-				<div class="tour__btn btn btn--aqua">О соборе</div>
-			</div>
-		</div>
-		<div class="tour__item">
-			<img src="{% static 'tour/media/background.jpg' %}" alt="" class="tour__photo">
-			<div class="tour__name">Какой-то собор</div>
-			<div class="tour__btn-wrapper">
-				<div class="tour__btn btn btn--gray">Виртуальный тур</div>
-				<div class="tour__btn btn btn--aqua">О соборе</div>
-			</div>
-		</div>
-		<div class="tour__item">
-			<img src="{% static 'tour/media/background.jpg' %}" alt="" class="tour__photo">
-			<div class="tour__name">Какой-то собор</div>
-			<div class="tour__btn-wrapper">
-				<div class="tour__btn btn btn--gray">Виртуальный тур</div>
-				<div class="tour__btn btn btn--aqua">О соборе</div>
-			</div>
-		</div>
-		<div class="tour__item">
-			<img src="{% static 'tour/media/background.jpg' %}" alt="" class="tour__photo">
-			<div class="tour__name">Какой-то собор</div>
-			<div class="tour__btn-wrapper">
-				<div class="tour__btn btn btn--gray">Виртуальный тур</div>
-				<div class="tour__btn btn btn--aqua">О соборе</div>
-			</div>
-		</div>
-		<div class="tour__item">
-			<img src="{% static 'tour/media/background.jpg' %}" alt="" class="tour__photo">
-			<div class="tour__name">Какой-то собор</div>
-			<div class="tour__btn-wrapper">
-				<div class="tour__btn btn btn--gray">Виртуальный тур</div>
-				<div class="tour__btn btn btn--aqua">О соборе</div>
-			</div>
-		</div>
+		{% endfor %}
 	</div>
 </div>
 <footer class="footer">
