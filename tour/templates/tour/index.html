@@ -70,9 +70,9 @@
 			<div class="tour__name">{{ t.title }}</div>
 			<div class="tour__btn-wrapper">
 				{% if t.video %}
-				<a href="{% url 'video' t.video.pk %}" class="animated-tour__btn btn">Виртуальный тур</a>
+				<a href="{% url 'video' t.video.pk %}" class="tour__btn btn btn--gray">Виртуальный тур</a>
 				{% else%}
-				<a href="#" class="animated-tour__btn btn">Виртуальный тур</a>
+				<a href="#" class="tour__btn btn btn--gray">Виртуальный тур</a>
 				{% endif %}
 				<div class="tour__btn btn btn--aqua">О соборе</div>
 			</div>
