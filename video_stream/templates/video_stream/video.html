@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{video.title}}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="{% static 'video_stream/css/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'video_stream/css/font-awesome.css' %}">
+  <link rel="stylesheet" href="{% static 'video_stream/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'video_stream/css/templatemo-style.css' %}">
+  <script src="{% static 'video_stream/js/vendor/modernizr-2.6.2.min.js' %}"></script>
+  <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
+
+</head>
+<body>
+
+{% block content %}
+  <div class="main-posts">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <video
+              id="my-video"
+              class="video-js"
+              controls
+              preload="auto"
+              width="1000"
+              height="800"
+              data-setup="{}"
+          >
+            <source src="{% url 'stream' video.id %}" type="video/mp4"/>
+            <source src="{% url 'stream' video.id %}" type="video/webm"/>
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
+
+
+<script src="{% static 'video_stream/js/vendor/jquery-1.10.2.min.js' %}"></script>
+<script src="{% static 'video_stream/js/min/plugins.min.js' %}"></script>
+<script src="{% static 'video_stream/js/min/main.min.js' %}"></script>
+
+<script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+<!-- Preloader -->
+<script type="text/javascript">
+    //<![CDATA[
+    $(window).load(function () { // makes sure the whole site is loaded
+        $('#loader').fadeOut(); // will first fade out the loading animation
+        $('#loader-wrapper').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+        $('body').delay(350).css({'overflow-y': 'visible'});
+    })
+    //]]>
+</script>
+</body>
+</html>

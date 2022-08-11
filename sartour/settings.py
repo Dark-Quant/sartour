@@ -26,9 +26,10 @@ SECRET_KEY = 'django-insecure-1uw=fr9#t#g$x4ws#fgkf_gg3g978ez7b2u4*q0caes5t-_9d_
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'e9f6-78-85-246-124.eu.ngrok.io',
-    '127.0.0.1'
-        ]
+	'2fa5-8-41-37-185.eu.ngrok.io',
+	'192.168.0.40',
+	'127.0.0.1'
+]
 
 
 # Application definition
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'video_stream.apps.VideoStreamConfig',
     'tour.apps.TourConfig'
 ]
 

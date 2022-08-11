@@ -20,6 +20,7 @@ from sartour import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('watch/', include('video_stream.urls')),
     path('', include('tour.urls'))
 ]
 
