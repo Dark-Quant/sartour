@@ -26,7 +26,7 @@
 </svg>
 
 <header class="header">
-    <div class="icon">Что-то</div>
+    <!-- <div class="icon">Что-то</div> -->
 </header>
 <!-- Видео сверху -->
 <div class="intro">
@@ -36,6 +36,7 @@
 	<div class="intro__content">
 		<div class="container">
 			<div class="intro__title title">Виртуальный тур</div>
+			<div class="intro__title title">"Православный Сарапул"</div>
 			<div class="intro__subtitle"></div>
 		</div>
 	</div>
@@ -48,9 +49,9 @@
         <div class="animated-tour__content">
             <div class="animated-tour__tilte">{{ t.title }}</div>
 			{% if t.video %}
-			<a href="{% url 'video' t.video.pk %}" class="animated-tour__btn btn">Виртуальный тур</a>
+			<a href="{% url 'video' t.video.pk %}" class="animated-tour__btn btn">Реконструкция</a>
 			{% else%}
-			<a href="#" class="animated-tour__btn btn">Виртуальный тур</a>
+			<a href="#" class="animated-tour__btn btn">Реконструкция</a>
 			{% endif %}
         </div>
     </div>
@@ -59,8 +60,8 @@
 <div class="tour">
     <div class="tour__block">
         <div class="container">
-			<div class="tour__title">Что-то</div>
-			<div class="tour__subtitle">Описание чего-то</div>
+			<!-- <div class="tour__title">Что-то</div>
+			<div class="tour__subtitle">Описание чего-то</div> -->
         </div>
     </div>
     <div class="tour__list container">
@@ -69,12 +70,14 @@
 			<img src="{{ t.photo.url }}" alt="" class="tour__photo">
 			<div class="tour__name">{{ t.title }}</div>
 			<div class="tour__btn-wrapper">
-				{% if t.video %}
-				<a href="{% url 'video' t.video.pk %}" class="tour__btn btn btn--gray">Виртуальный тур</a>
-				{% else%}
+				{% if t.virtual_tour %}
+				<a href="{{ t.virtual_tour }}" class="tour__btn btn btn--gray">Виртуальный тур</a>
+				{% else %}
 				<a href="#" class="tour__btn btn btn--gray">Виртуальный тур</a>
 				{% endif %}
-				<div class="tour__btn btn btn--aqua">О соборе</div>
+				{% if t.video %}
+				<a href="{% url 'video' t.video.pk %}" class="tour__btn btn btn--aqua">Обзорная экскурсия</a>
+				{% endif %}
 			</div>
 		</div>
 		{% endfor %}
@@ -83,7 +86,7 @@
 <footer class="footer">
     <div class="footer__inner container">
 		<div class="footer__description">
-			<a class="social__item" href="#" target="_blank">
+			<a class="social__item" href="https://vk.com/sar_cdutt" target="_blank">
 				<svg class="social__icon">
 					<use xlink:href="#vk"></use>
 				</svg>

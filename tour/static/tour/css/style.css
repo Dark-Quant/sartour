@@ -107,7 +107,7 @@ body {
 }
 
 .intro__title {
-    font-size: 104px;
+    font-size: 88px;
     text-align: center;
     color: #fff;
 }
@@ -453,7 +453,7 @@ body {
     }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 420px) {
     .container {
         max-width: 320px;
     }
